@@ -2,10 +2,9 @@ package org.vampireteeth.springhibernate.service.impl;
 
 import java.util.List;
 
-import javax.transaction.Transactional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.vampireteeth.springhibernate.dao.EmployeeDao;
 import org.vampireteeth.springhibernate.entity.EmployeeEntity;
 import org.vampireteeth.springhibernate.service.EmployeeService;
@@ -23,6 +22,7 @@ public class EmployeeServiceImpl implements EmployeeService{
 	}
 
 	@Override
+	@Transactional
 	public List<EmployeeEntity> getAllEmployees() {
 		return employeeDao.getAllEmployees();
 	}

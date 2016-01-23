@@ -7,24 +7,24 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="employee")
+@Table(name="EMPLOYEE")
 public class EmployeeEntity {
 
 	@Id
-	@Column(name = "id")
+	@Column(name = "ID")
 	@GeneratedValue
 	private Integer id;
 
-	@Column(name = "firstname")
+	@Column(name = "FIRSTNAME")
 	private String firstname;
 	
-	@Column(name = "lastname")
+	@Column(name = "LASTNAME")
 	private String lastname;
 	
-	@Column(name = "telephone")
+	@Column(name = "TELEPHONE")
 	private String telephone;
 	
-	@Column(name = "email")
+	@Column(name = "EMAIL")
 	private String email;
 
 	public Integer getId() {
